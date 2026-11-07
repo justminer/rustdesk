@@ -92,8 +92,14 @@ class _DesktopTabPageState extends State<DesktopTabPage> {
   @override
   Widget build(BuildContext context) {
     final tabWidget = Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/bg.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Scaffold(
-            backgroundColor: Theme.of(context).colorScheme.background,
+            backgroundColor: Colors.transparent,
             body: DesktopTab(
               controller: tabController,
               tail: Offstage(
@@ -117,3 +123,4 @@ class _DesktopTabPageState extends State<DesktopTabPage> {
           );
   }
 }
+
